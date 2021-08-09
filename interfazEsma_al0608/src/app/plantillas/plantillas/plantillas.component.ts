@@ -20,7 +20,7 @@ export class PlantillasComponent implements OnInit {
   public plantillaResultante:Plantilla_esma[] | any
 
   public vfondo:string=""
-  //public tformato:string="html"
+  public tformato:string="html"
   public vformato:string=""
 
   public vp_esma:string=""
@@ -65,11 +65,10 @@ export class PlantillasComponent implements OnInit {
   //metodo Get por fondo y plantilla actual se le agrego parametros adicionales de las fechas
   public buscarPlantillas(){
     console.log("mi fecha desde el Compnente inicia"+this.tfechai)
-    this.servicioPlantillas.getPlantillaxfondo(this.sPlantilla.cod_fondo,this.sPlantilla.plantilla_esma,this.sPlantilla.mfechaI,this.sPlantilla.mfechaF)
+    this.servicioPlantillas.getPlantillaxfondo(this.sPlantilla.cod_fondo,this.sPlantilla.plantilla_esma)
     .subscribe(data=> {
       console.log("Filtrado -- "+data);
       this.plantillaResultante=data
-      console.log("mi fecha desde el Compnente inicia"+this.sPlantilla.mfechaI)
     })
     this.mostrar=true
   }

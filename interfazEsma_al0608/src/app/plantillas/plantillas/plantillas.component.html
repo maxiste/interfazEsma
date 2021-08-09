@@ -21,14 +21,14 @@
     <div class="card card-primary">
         <div class="card-header">Generacion de Archivos XML</div>
         <div class="card-body">
-          <!-- <div class="form-group">
+          <div class="form-group">
             <div class="control-label col-xs-2">
                <label for="formato">Tipo Formato Salida</label>
             </div>
             <div class="col-xs-10">
                 <input type="text" id="formato" name="formato" class="form-control" [(ngModel)] = "tformato"/>
             </div>
-          </div> -->
+          </div>
 
            <div class="form-group">
                       <label class="control-label col-xs-2" for="plantilla">Seleccione Tipo de Plantilla</label>
@@ -51,20 +51,20 @@
           <div class="form-group">
                       <label class="control-label col-xs-2" for="fInicio">Fecha Inicial</label>
                       <div class="col-xs-10">
-                          <input id="fInicio" type="date" name="fInicio" class="form-control" placeholder="Seleccione Fecha Inicial" required="required" [(ngModel)] = "sPlantilla.mfechaI"/>
+                          <input id="fInicio" type="date" name="fInicio" class="form-control" placeholder="Seleccione Fecha Inicial" required="required" [(ngModel)] = "tfechai"/>
                       </div>
               </div>
 
               <div class="form-group">
                       <label class="control-label col-xs-2" for="fFin">Fecha Final</label>
                       <div class="col-xs-10">
-                          <input id="fFin" type="date" name="fFin" class="form-control" placeholder="Seleccione Fecha Final" required="required" [(ngModel)] = "sPlantilla.mfechaF"/>
+                          <input id="fFin" type="date" name="fFin" class="form-control" placeholder="Seleccione Fecha Final" required="required" [(ngModel)] = "tfechaf"/>
                       </div>
                </div>
 
 
           <div class="nav-item ml-auto text-right">
-            <input type="button" value="Generar" (click)="buscarPlantillas()"  class="btn mr-1 btn-danger">
+            <input type="button" value="Procesar" (click)="buscarPlantillas()"  class="btn mr-1 btn-danger">
             <!-- <input type="button" value="ProcesarFormatos" (click)="tiposFormatos()" class="btn mr-1 btn-success" disabled> -->
             <input type="button" value="Volver" (click)="vaciarFormulario()" class="btn mr-1 btn-warning">
           </div>

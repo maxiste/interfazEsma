@@ -22,11 +22,11 @@ export class PlantillasService {
    //metodos de peticiones al Servicio
 
 //Otras BusquedaPlantilla busqueda fondo y plantilla Actyul de Backend //se agrego aidcional los dos parameytros advionales
-public getPlantillaxfondo(fondo:string, p_esma:string, fechaI:string,fechaF:string):Observable<Plantilla_esma[]>{
+public getPlantillaxfondo(fondo:string, p_esma:string):Observable<Plantilla_esma[]>{
   //{params:{{propiedaModelo:variabledefinidaMetodo}}
-  console.log("servicio FGecha I"+fechaI)
 
-  return this.http.get<Plantilla_esma[]>(`${this.uri}/plantillas/`,{params:{fondo:fondo,plantilla_esma:p_esma,mfechaI:fechaI,mfechaF:fechaF}});
+
+  return this.http.get<Plantilla_esma[]>(`${this.uri}/plantillas/`,{params:{fondo:fondo,plantilla_esma:p_esma}});
 }
 
   //  //Con Peticiones Post difernete al 2205 noche
